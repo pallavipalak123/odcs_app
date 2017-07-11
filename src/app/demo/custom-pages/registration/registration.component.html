@@ -1,0 +1,52 @@
+<div fxLayout="row" fxLayoutAlign="center center" style="height: 100%;">
+  <div class="forgot mat-elevation-z12">
+    <div class="forgot-header" fxLayout="column" fxLayoutAlign="center center">
+      <img src="assets/img/icon.png">
+    </div>
+    <form #form="ngForm" (ngSubmit)="send(form.value)">
+
+       <div *ngIf="forgotSuccess" class="form-success">{{forgotSuccessMessage}}</div>
+       <div *ngIf="forgotFail" class="form-fail">{{forgotFailMessage}}</div>
+
+      <div class="forgot-content" fxLayout="column" fxLayoutAlign="start stretch">
+
+        <h2 align="center">Registration Page</h2>
+
+        <md-input-container>
+          <input mdInput placeholder="name" type="text" name="name" required [(ngModel)]="name">
+        </md-input-container>
+        
+        <md-input-container>
+          <input mdInput placeholder="email" type="text" name="email" required [(ngModel)]="email">
+        </md-input-container>
+
+        <md-input-container>
+          <input mdInput placeholder="password" type="password" name="password" required [(ngModel)]="password">
+        </md-input-container>
+
+        <md-input-container>
+          <input mdInput placeholder="rePassword" type="password" name="rePassword" required [(ngModel)]="rePassword">
+        </md-input-container>
+
+        <md-input-container>
+          <input mdInput placeholder="countryCode" type="number" name="countryCode" required [(ngModel)]="counryCode">
+        </md-input-container>
+        
+        <md-input-container>
+          <input mdInput placeholder="phone" type="number" name="phone" required [(ngModel)]="phone">
+        </md-input-container>
+
+       <!--<input type="checkbox" name="checkbox" value="true" [(ngModel)]="confirm"> I have read and accept the following <a target="_blank" href="http://ideamensch.com/terms-and-conditions" rel="nofollow noopener" >terms and conditions</a>-->
+
+        <form action="#" onsubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Please indicate that you have read and agree to the Terms and Conditions and Privacy Policy'); return false; }">
+
+       <input type="checkbox" name="checkbox" value="check" id="agree" [(ngModel)]="confirm"> I have read and agree to the Terms and Conditions and Privacy Policy
+
+   </form>
+        
+        <button color="primary" md-raised-button [disabled]="!form.valid">SUBMIT</button>
+        <p class="note"><a [routerLink]="['/login']">Go to login</a></p>
+      </div>
+    </form>
+  </div>
+</div>
