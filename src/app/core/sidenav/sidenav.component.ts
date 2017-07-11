@@ -24,7 +24,7 @@ export class SidenavComponent implements OnInit, OnDestroy {
     private sidenavService: SidenavService,
     private router: Router,
     private breadcrumbService: BreadcrumbService,
-    private snackBar: MdSnackBar
+    private snackBar: MdSnackBar   
   ) { }
 
   ngOnInit() {
