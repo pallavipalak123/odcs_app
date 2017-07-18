@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import {ToasterModule, ToasterService} from 'angular2-toaster';
 import { AppComponent } from './app.component';
 import { SidenavComponent } from './core/sidenav/sidenav.component';
 import { MaterialModule, MdIconRegistry } from "@angular/material";
@@ -71,6 +72,7 @@ import { ToolbarComponent } from './core/toolbar/toolbar.component';
 import { FavoritesComponent } from './core/toolbar/favorites/favorites.component';
 import { RegistrationComponent } from './demo/custom-pages/registration/registration.component';
 import { LoginComponent } from './demo/custom-pages/login/login.component';
+import { EqualValidator } from './demo/custom-pages/registration/password.match.directive';
 
 const perfectScrollbarConfig: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -83,6 +85,7 @@ const sortablejsConfig: SortablejsOptions = {
 
 @NgModule({
   declarations: [
+    
     AppComponent,
     SidenavComponent,
     SidenavItemComponent,
@@ -113,6 +116,7 @@ const sortablejsConfig: SortablejsOptions = {
     Level5Component,
     AdminComponent,
     ForgotPasswordComponent,
+    EqualValidator,
 
     EditorComponent,
     QuickpanelComponent,
@@ -143,6 +147,7 @@ const sortablejsConfig: SortablejsOptions = {
   ],
   imports: [
     CommonModule,
+    ToasterModule,
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,

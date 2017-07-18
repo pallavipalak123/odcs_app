@@ -1,3 +1,27 @@
-<p>
-  login works!
-</p>
+<div fxLayout="row" fxLayoutAlign="center center" style="height: 100%;">
+  <div class="forgot mat-elevation-z12">
+    <div class="forgot-header" fxLayout="column" fxLayoutAlign="center center">
+      <img src="assets/img/icon.png">
+    </div>
+    <form #form="ngForm" (ngSubmit)="send(form.value)">
+       <div *ngIf="forgotSuccess" class="form-success">{{forgotSuccessMessage}}</div>
+       <div *ngIf="forgotFail" class="form-fail">{{forgotFailMessage}}</div>
+      <div class="forgot-content" fxLayout="column" fxLayoutAlign="start stretch">
+
+        <h2 align="center">Login page</h2>
+        
+        <md-input-container>
+          <input mdInput placeholder="email" type="text" name="email" required [(ngModel)]="email">
+        </md-input-container>
+        
+        <md-input-container>
+          <input mdInput placeholder="password" type="password" name="password" required [(ngModel)]="password">
+        </md-input-container>
+        
+        <button color="primary" type="submit" md-raised-button [disabled]="!form.valid" >LOGIN</button>
+        <p class="note"><a [routerLink]="['/register']">Back to registration</a></p>
+      </div>
+    </form>
+  </div>
+</div>
+ <toaster-container></toaster-container>

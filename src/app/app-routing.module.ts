@@ -20,6 +20,7 @@ import {SimpleTableComponent} from "./demo/tables/simple-table/simple-table.comp
 import {FixedHeaderTableComponent} from "./demo/tables/fixed-header-table/fixed-header-table.component";
 import {ForgotPasswordComponent} from "./demo/custom-pages/forgot-password/forgot-password.component";
 import { RegistrationComponent } from "./demo/custom-pages/registration/registration.component";
+import { LoginComponent } from "./demo/custom-pages/login/login.component";
 
 import {EditorComponent} from "./demo/editor/editor.component";
 import {DashboardComponent} from "./demo/dashboard/dashboard.component";
@@ -34,10 +35,20 @@ const routes: Routes = [
     path: 'forgot-password',
     component: ForgotPasswordComponent
   },
-   {
-        path: 'register',
-        component: RegistrationComponent
-      },
+  {
+     path: 'register',
+     component: RegistrationComponent
+  },
+  {
+     path: 'login',
+     component: LoginComponent
+  },
+  {
+    path: 'dashboard-v1',
+    component: DashboardV1Component 
+  },
+
+      
   {
     path: '',
     component: AdminComponent,

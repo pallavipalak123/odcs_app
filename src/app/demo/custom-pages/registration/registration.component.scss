@@ -18,7 +18,7 @@
   }
 
   .forgot-content {
-    padding: 24px 42px 42px;
+    padding: 3px 5px 5px;
 
     md-input-container {
       width: 100%;
@@ -39,6 +39,15 @@
       margin: 24px 0 0;
       text-align: center;
     }
-    
+   .mat-input-wrapper{
+     margin-bottom: 24px;
+   } 
+   .alert-alert-danger{
+    color: red;
+    margin-top: -25px;
+   }
+   .color{
+   color:#A9A9A9
+   }
   }
 }

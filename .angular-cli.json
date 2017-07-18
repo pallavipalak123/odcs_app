@@ -19,6 +19,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "ms",
       "styles": [
+        "../node_modules/ng2-toastr/bundles/ng2-toastr.min.css",
         "../node_modules/normalize.css/normalize.css",
         "./app/core/highlightjs/github.css",
         "../node_modules/nvd3/build/nv.d3.css",
