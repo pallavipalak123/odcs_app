@@ -441,4 +441,4 @@ In our theme we use various different external libraries. All of these libraries
 * All Avatars used are from [Adorable Avatars](//github.com/adorableio/avatars-api) licensed MIT and can therefore be also used in your application and are included in the download.
 * Backgrounds used are from [Oxygenna](//www.oxygenna.com/news/brand-new-set-of-40-material-design-backgrounds). Marked as "Free to use in commercial projects" and can therefore not be bundled in the download, but can easily be added afterwards.
 
-All other assets shown in the demo are included in the download. All external libraries are usually loaded with `npm install`, except "HighlightJS", which is bundled.
+All other assets shown in the demo are included in the download. All external libraries are usually loaded with `npm install`, except "HighlightJS", which is bundled.# pallavipalak123.github.com
